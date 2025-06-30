@@ -9,7 +9,6 @@
       apt:
         name:
           - apache2
-          - libapache2-mod-cgi
           - imagemagick
           - python3
         update_cache: yes
@@ -38,7 +37,7 @@
     - name: Copy CGI script
       copy:
         src: "cgi-bin/converter.py"
-        dest: "/var/www/webapp/cgi-bin/converter.cgi"
+        dest: "/var/www/webapp/cgi-bin/converter.py"
         mode: '0755'
 
     - name: Configure Apache Virtual Host
